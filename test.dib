@@ -1,0 +1,18 @@
+#!fsharp
+
+#r "nuget: FSharp.Data"
+
+#!fsharp
+
+#r "System.Xml.Linq.dll"
+
+#!fsharp
+
+open FSharp.Data
+
+type RexsExample = XmlProvider<"FVA_Shaft-with-additional-mass.rexs">
+let sample = RexsExample.GetSample()
+
+#!fsharp
+
+sample.Components
